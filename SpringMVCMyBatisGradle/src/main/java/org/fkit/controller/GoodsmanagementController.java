@@ -53,7 +53,7 @@ public class GoodsmanagementController {
 			 HttpSession session){
 		Goods goods=GoodsmanagementService.goodsupdate
 		(id,name,price,sort);
-		return "goodsmanagement";
+		return "adminturn";
 	}
 	@RequestMapping(value="/listgoods")
 	public String listgoods(@RequestParam("id")Integer id,Model model){
