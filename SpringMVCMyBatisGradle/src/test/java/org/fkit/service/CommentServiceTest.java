@@ -1,5 +1,11 @@
 package org.fkit.service;
-import org.fkit.domain.User;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.fkit.domain.Comment;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,15 +15,19 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)   
 @ContextConfiguration(locations={"classpath:applicationContext.xml","classpath:springmvc-config.xml"})
-public class RegisterServiceTest {
+public class CommentServiceTest {
 	@Autowired 
-	 private RegisterService registerService;
+	 private CommentService CommentService;
 	@Test
-	public void testRegister() {
-		User insert = registerService.register
-				("lxl", "789456123","789456123",
-				"13325649874@163.com","13325649874");
-		System.out.println("注册成功");
+	public void testComment() {
+		CommentService.comment(11, 5, 5, 5, "", "很满意！");
+		System.out.println("评论成功");
 	}
+
+//	@Test
+//	public void testGetAll() {
+//		List<Comment> comment_list = CommentService.getAll();
+//		System.out.println(comment_list);
+//	}
 
 }
