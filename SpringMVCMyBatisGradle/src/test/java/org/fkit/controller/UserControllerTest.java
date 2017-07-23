@@ -1,7 +1,5 @@
 package org.fkit.controller;
 
-import static org.junit.Assert.*;
-
 import org.fkit.domain.User;
 import org.fkit.service.UserService;
 import org.junit.Test;
@@ -17,18 +15,30 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 public class UserControllerTest {
 	@Autowired 
-	@Qualifier("UserService")
+	@Qualifier("userService")
 	 private UserService UserService;
 
 	@Test
 	public void testLogin() {
 		User u=UserService.login("zxm", "123456");
 		if(u!= null){
-			System.out.println("登陆成功");
+			System.out.println("登录成功");
 		}else{
-			System.out.println("登陆失败");
+			System.out.println("登录失败");
 		}
 		
 	}
-
+	@Test
+	public void testupdatepassword() {
+		User user = UserService.updatepassword
+				("1284517569@163.com","123456");
+		System.out.println("修改成功");
+	}
+	@Test
+	public void testgetuser() {
+		User user=UserService.getuser(2);
+		System.out.println(user.getUsername());
+		System.out.println(user.getemail());
+		System.out.println(user.getPhone());
+	}
 }

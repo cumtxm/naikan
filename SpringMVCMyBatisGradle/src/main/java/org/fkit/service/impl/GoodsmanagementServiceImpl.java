@@ -14,35 +14,35 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("goodsmanagementService")
 public class GoodsmanagementServiceImpl implements GoodsmanagementService {
 	@Autowired
-	private GoodsmanagementMapper GoodsmanagementMapper;
+	private GoodsmanagementMapper goodsmanagementMapper;
 	@Transactional(readOnly=true)
 	@Override
 	public List<Goods> getAll() {
 		// TODO Auto-generated method stub
-		return GoodsmanagementMapper.findAll();
+		return goodsmanagementMapper.findAll();
 	}
 	@Override
 	public Goods goodsinsert(String name, String price,String image,String sort,String image1,String image2,String image3) {
 		// TODO Auto-generated method stub
-		return GoodsmanagementMapper.goodsinsert(name, price,image,sort,image1,image2,image3);
+		return goodsmanagementMapper.goodsinsert(name, price,image,sort,image1,image2,image3);
 	}
 	@Override
 	public void goods(int id){
-		GoodsmanagementMapper.removegoods(id);
+		goodsmanagementMapper.removegoods(id);
 	}
 	//修改
 	@Override
 	public Goods getid(Integer id) {
 		// TODO Auto-generated method stub
-		return GoodsmanagementMapper.findid(id);
+		return goodsmanagementMapper.findid(id);
 	}
 	@Override
 	public Goods goodsupdate(Integer id,String name,String price,String sort) {
-		return GoodsmanagementMapper.goodsupdate(id,name,price,sort);
+		return goodsmanagementMapper.goodsupdate(id,name,price,sort);
 	}
 	//stock
 	@Override
 	public Goods stockupdate(Integer id,String stock) {
-		return GoodsmanagementMapper.stockupdate(id,stock);
+		return goodsmanagementMapper.stockupdate(id,stock);
 	}
 }
