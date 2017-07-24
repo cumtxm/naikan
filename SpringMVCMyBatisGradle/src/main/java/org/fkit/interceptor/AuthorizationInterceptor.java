@@ -15,7 +15,7 @@ public class AuthorizationInterceptor  implements HandlerInterceptor {
 	private static final String[] IGNORE_URI = {"/loginForm", "/login","/register","/forget","/findpwd", "/index", "/allgoods"
 			, "/sort1","/sort2","/sort3","/sort4","/adminlogin", "/details","/adminindex","/adminmain","/adminturn","/goodsinsert","/goodsmanagement",
 			"/goodsstock","/goodsupdte","/mcomment","/morder","/stockupdate","/status","/listuser","/inform","/removegoods","/goodsupdate","/listgoods"
-			,"/liststock"};
+			,"/liststock","/tree"};
 	
 	 /** 
      * 该方法将在整个请求完成之后执行， 主要作用是用于清理资源的，

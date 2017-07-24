@@ -57,7 +57,7 @@
               text:'库存管理',
               items:[
                 {id:'resource',text:'库存情况',href:'goodsstock'},
-                /*{id:'loader',text:'',href:'main/loader.html'}*/  
+                {id:'loader',text:'商品树形管理',href:'tree'} 
               ]
             }]
           }];
