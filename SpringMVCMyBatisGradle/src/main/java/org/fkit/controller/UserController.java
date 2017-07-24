@@ -35,7 +35,7 @@ public class UserController {
 	/**
 	 * 处理/login请求
 	 * */
-	@RequestMapping(value="/login")
+	@RequestMapping(value="/login1")
 	 public ModelAndView login(
 			 String username,String password,boolean check,
 			 ModelAndView mv,

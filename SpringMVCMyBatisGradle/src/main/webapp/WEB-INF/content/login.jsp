@@ -81,7 +81,7 @@
 		<div class="col-md-6">
 		</div>
 		<div class="col-md-4" >
-			<form class="form-horizontal" role="form" bgcolor='E6E6FA' id="loginForm" action="login" method="post">
+			<form class="form-horizontal" role="form" bgcolor='E6E6FA' id="loginForm" action="login1" method="post">
 				<div class="form-group" >
 					 
 					<label class="col-sm-2 control-label" >
