@@ -94,13 +94,13 @@
 		</div> 
 		</div>
 		<div class="col-md-3 column">
-		<form action="cart1?image=${goods.image}&name=${goods.name}&price=${goods.price}&user_id=${sessionScope.user.id}" method="post">
+		<form action="cart1?image=${goods.image}&name=${goods.name}&price=${goods.price}&user_id=${sessionScope.user.id}&goods_id=${goods.id}" method="post">
 			<h1><font face="方正舒体">${goods.name}</font></h1>
             <br><input type="hidden" name="id" value="${goods.id}"></br>
 			<h1><font color="red">¥${goods.price}</font></h1>
 			<h3><font color="orange"><span class="glyphicon glyphicon-star"></span><a href="collect1?image=${goods.image}&name=${goods.name}&price=${goods.price}&user_id=${sessionScope.user.id}&goods_id=${goods.id}">收藏商品</a></font></h3>
 			<br></br>
-			数量：<input type="text" id="quantity" size=3 name="quantity">
+			数量：<input type="text" id="quantity" size=3 name="quantity" value=1>
 
 			<br></br>
                 <p>

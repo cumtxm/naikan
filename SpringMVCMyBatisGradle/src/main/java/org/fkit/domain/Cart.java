@@ -9,6 +9,7 @@ public class Cart implements Serializable {
 	private String price;
 	private Integer quantity;
 	private Integer user_id;
+	private Integer goods_id;
 	
 	public String getName() {
 		return name;
@@ -25,7 +26,7 @@ public class Cart implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Cart [id=" + id + ", name=" + name + ", image=" + image+ ",price=" + price+ ",quantity="+quantity+",user_id="+user_id+"]";
+		return "Cart [id=" + id + ", name=" + name + ", image=" + image+ ",price=" + price+ ",quantity="+quantity+",user_id="+user_id+",goods_id="+goods_id+"]";
 	}
 	public int getId() {
 		return id;
@@ -44,5 +45,11 @@ public class Cart implements Serializable {
 	}
 	public void setPrice(String price) {
 		this.price = price;
+	}
+	public Integer getGoods_id() {
+		return goods_id;
+	}
+	public void setGoods_id(Integer goods_id) {
+		this.goods_id = goods_id;
 	}
 }

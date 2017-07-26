@@ -25,7 +25,7 @@ public class CartServiceTest {
 	@Test
 	public void testCartStringStringStringIntegerInteger() {
 		Cart cart=CartService.cart
-		("无袖连衣裙","1.jpg","159",3,2);
+		("无袖连衣裙","1.jpg","159",3,2,1);
 		System.out.println("添加成功");
 	}
 

@@ -22,12 +22,20 @@ public class CartServiceImpl implements CartService {
 		return cartMapper.findAll(user_id);
 	}
 	@Override
-	public Cart cart(String name,String image,String price,Integer quantity,Integer user_id){
-		return cartMapper.insertcart(name, image,price,quantity,user_id);
+	public Cart cart(String name,String image,String price,Integer quantity,Integer user_id,Integer goods_id){
+		return cartMapper.insertcart(name, image,price,quantity,user_id,goods_id);
 	}
 	@Override
 	public void cart(int id){
 		cartMapper.removecart(id);
+	}
+	@Override
+	public Cart cartFind(Integer user_id, Integer goods_id) {
+		return cartMapper.cartFind(user_id, goods_id);
+	}
+	@Override
+	public Cart updatecart(Integer user_id,Integer goods_id,Integer quantity){
+		return cartMapper.updatecart(quantity, user_id, goods_id);
 	}
 	
 }

@@ -28,14 +28,21 @@ public class CartController {
 		return "cart";
 	}
 	@RequestMapping(value="/cart1")
-	public ModelAndView cart1(String name,String image,String price,Integer quantity,Integer user_id,
+	public ModelAndView cart1(String name,String image,String price,Integer quantity,Integer user_id,Integer goods_id,
 			ModelAndView mv,
 			 HttpSession session){
+		Cart mycart = CartService.cartFind(user_id,goods_id);
+		if(mycart != null){
+		CartService.updatecart(user_id, goods_id, quantity);
+		mv.setViewName("turn");	
+		}else{
 		CartService.cart
-				(name,image,price,quantity,user_id);
+				(name,image,price,quantity,user_id,goods_id);
 		mv.setViewName("turn");
+		}
 		return mv;
 	}
+		
 	@RequestMapping(value="/removecart")
 	public ModelAndView removecart(int id,ModelAndView mv,
 			 HttpSession session){
